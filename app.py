@@ -1,5 +1,4 @@
 print("test")
-<<<<<<< HEAD
 
 print("change-1")
 
