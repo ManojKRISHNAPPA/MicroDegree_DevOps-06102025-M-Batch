@@ -10,12 +10,21 @@ pipeline{
             }
         }
 
-        stage('Bye'){
+        stage('Middle-stage'){
+            steps{
+                sh'''
+                    echo "middle stage"
+                '''
+            }
+        }
+
+        stage('Final-Stage'){
             steps{
                 sh'''
                     echo "Final stage"
                 '''
             }
         }
+        
     }
 }
