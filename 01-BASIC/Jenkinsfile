@@ -25,6 +25,12 @@ pipeline{
                 '''
             }
         }
+
+        stgae('Docker build'){
+            sh'''
+                echo "this is just test"
+            '''
+        }
         
     }
 }
