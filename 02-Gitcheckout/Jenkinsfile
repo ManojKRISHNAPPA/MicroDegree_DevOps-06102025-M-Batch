@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('GIT-CHECKOUT'){
             steps{
-                git url: 'https://github.com/ManojKRISHNAPPA/MicroDegree_DevOps-06102025-M-Batch.git', branch: 'production'
+                git url: 'https://github.com/ManojKRISHNAPPA/MicroDegree_DevOps-06102025-M-Batch.git', branch: 'jenkins'
             }
         }
     }
