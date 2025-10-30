@@ -27,9 +27,12 @@ pipeline{
         }
 
         stage('Docker build'){
-            sh'''
-                echo "this is just test"
-            '''
+            steps{
+                sh'''
+                    echo "this is just test"
+                '''
+            }
+
         }
         
     }
