@@ -1,0 +1,39 @@
+pipeline{
+    agent any
+
+    stages{
+        stage('Hello'){
+            steps{
+                sh'''
+                    echo "First stage"
+                '''
+            }
+        }
+
+        stage('Middle-stage'){
+            steps{
+                sh'''
+                    echo "middle stage"
+                '''
+            }
+        }
+
+        stage('Final-Stage'){
+            steps{
+                sh'''
+                    echo "Final stage"
+                '''
+            }
+        }
+
+        stage('Docker build'){
+            steps{
+                sh'''
+                    echo "this is just test"
+                '''
+            }
+
+        }
+        
+    }
+}
