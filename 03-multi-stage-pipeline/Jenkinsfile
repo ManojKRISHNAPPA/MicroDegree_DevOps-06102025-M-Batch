@@ -7,13 +7,30 @@ pipeline{
 
     stages{
         stage('Build-Stage'){
-            steps{
-                sh '''
-                    echo "Hello Jenkins"
-                    echo "This is a test pipeline"
-                    echo "ENV is $ENV"
-                ''' 
+            stages{
+                stage('checking_code'){
+                    steps{
+                        sh 'echo "Hello World"'
+                    }
+                }
+                stage('testing_code'){
+                    steps{
+                        sh 'echo "Hello World"'
+                    }
+                }
+                }
+            }
+
+        }
+
+        stage('Deploying to one more env'){
+            stages{
+                stage{
+                    steps{
+                        sh 'echo "testing in dev"'
+                    }
+                }
             }
         }
+    
     }
-}
