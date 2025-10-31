@@ -8,22 +8,14 @@ pipeline {
                     steps {
                         echo "test"
                     }
-                    post {
-                        always {
-                            junit "**/TEST-*.xml"
-                        }
-                    }
+                    
                 }
                 stage('Test On Linux') {
                     agent any
                     steps {
                         echo "test-2"
                     }
-                    post {
-                        always {
-                            junit "**/TEST-*.xml"
-                        }
-                    }
+                    
                 }
             }
         }
