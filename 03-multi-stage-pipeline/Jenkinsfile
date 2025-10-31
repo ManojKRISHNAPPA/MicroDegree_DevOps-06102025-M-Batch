@@ -1,36 +1,34 @@
-pipeline{
+pipeline {
     agent any 
 
-    parameters{
-        string(name: 'ENV',defaultValue: 'Prod',description: 'This is to test...')
+    parameters {
+        string(name: 'ENV', defaultValue: 'Prod', description: 'This is to test...')
     }
 
-    stages{
-        stage('Build-Stage'){
-            stages{
-                stage('checking_code'){
-                    steps{
+    stages {
+        stage('Build-Stage') {
+            stages {
+                stage('checking_code') {
+                    steps {
                         sh 'echo "Hello World"'
                     }
                 }
-                stage('testing_code'){
-                    steps{
+                stage('testing_code') {
+                    steps {
                         sh 'echo "Hello World"'
                     }
-                }
                 }
             }
-
         }
 
-        stage('Deploying to one more env'){
-            stages{
-                stage{
-                    steps{
+        stage('Deploying to one more env') {
+            stages {
+                stage('deploy_to_dev') {
+                    steps {
                         sh 'echo "testing in dev"'
                     }
                 }
             }
         }
-    
     }
+}
