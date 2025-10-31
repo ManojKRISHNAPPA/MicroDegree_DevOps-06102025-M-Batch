@@ -25,5 +25,30 @@ pipeline {
                 echo "test"
             }
         }
+
+        stage('deploy Tests') {
+            parallel {
+                stage('Test On Windows') {
+                    agent any
+                    steps {
+                        echo "test"
+                    }
+                    
+                }
+                stage('Test On Linux') {
+                    agent any
+                    steps {
+                        echo "test-2"
+                    }
+                    
+                }
+            }
+        }
+        stage('Deploytest'){
+            steps{
+                echo "test"
+            }
+        }
+
     }
 }
