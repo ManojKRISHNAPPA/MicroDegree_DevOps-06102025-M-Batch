@@ -4,7 +4,7 @@ pipeline{
         string (name:'ENV', defaultvalue:"Prod", description:"this is to test")
     }
     stages{
-        stage{
+        stage("Build stage"){
             steps{
                 sh '''
                     echo "this is parameter"
