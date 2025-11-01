@@ -1,30 +1,54 @@
-pipeline{
+pipeline {
     agent none
-     parameters {
-        string(name: 'ENV', defaultValue: 'Prod', description: 'This is to test...')
-    }
-    stages{
-        stage("Build stage"){
-            parallel{
-                stage("checking code"){
-                    steps{
-                              sh '''
-                                echo "Hello World"
-                                 '''
-            }
+    stages {
+        stage('Run Tests') {
+            parallel {
+                stage('Test On Windows') {
+                    agent any
+                    steps {
+                        echo "test"
+                    }
+                    
                 }
-                stage("testing code"){
-                    steps{
-                              sh '''
-                                echo "Hello World"
-                                 '''
-            }
+                stage('Test On Linux') {
+                    agent any
+                    steps {
+                        echo "test-2"
+                    }
+                    
                 }
-
             }
-            }
-            
         }
-       
-        
+
+        stage('DeployStage'){
+            steps{
+                echo "test"
+            }
+        }
+
+        stage('deploy Tests') {
+            parallel {
+                stage('Test On Windows') {
+                    agent any
+                    steps {
+                        echo "test"
+                    }
+                    
+                }
+                stage('Test On Linux') {
+                    agent any
+                    steps {
+                        echo "test-2"
+                    }
+                    
+                }
+            }
+        }
+        stage('Deploytest'){
+            steps{
+                echo "test"
+            }
+        }
+
+    }
 }
