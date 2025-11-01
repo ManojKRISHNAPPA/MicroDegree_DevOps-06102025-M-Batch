@@ -1,0 +1,22 @@
+pipeline{
+    agent none
+    parameters{
+        string (name:'ENV',deflautValue=:'PPRD',decription:"this is jkjk")
+        stages{
+            stage("Dev Env"){
+                parallel{
+                    stage("build code"){
+                        steps{
+                            echo "code review"
+                        }
+                    satge("test  the code"){
+                        steps{
+                            echo "test the code"
+                        }
+                    }
+                    }
+                }
+            }
+        }
+    }
+}
