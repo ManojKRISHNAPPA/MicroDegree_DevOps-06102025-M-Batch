@@ -5,6 +5,7 @@ pipeline{
     }
     stages{
         stage("Build stage"){
+            parallel{
             stages{
                 stage("checking code"){
                     steps{
@@ -22,28 +23,10 @@ pipeline{
                 }
 
             }
-            
-        }
-        stage("deploy stage"){
-            stages{
-                stage("checking code"){
-                    steps{
-                              sh '''
-                                echo "Hello World"
-                                 '''
-            }
-                }
-                stage("deploy prod"){
-                    steps{
-                              sh '''
-                                echo "Hello World"
-                                 '''
-            }
-                }
-
             }
             
         }
+       
         
 }
 }
