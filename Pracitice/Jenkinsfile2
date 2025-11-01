@@ -1,7 +1,5 @@
 pipeline{
     agent none
-    parameters{
-        string (name:'ENV',defaultValue=:'PPRD',decription:"this is jkjk")
         stages{
             stage("Dev Env"){
                 parallel{
@@ -18,5 +16,5 @@ pipeline{
                 }
             }
         }
-    }
+    
 }
