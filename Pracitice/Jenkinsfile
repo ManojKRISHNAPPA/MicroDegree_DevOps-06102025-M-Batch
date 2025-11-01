@@ -24,25 +24,6 @@ pipeline{
             }
             
         }
-        stage("deploying another env"){
-            stages{
-                stage("deploy in dev"){
-                    steps{
-                              sh '''
-                                echo "Hello World"
-                                 '''
-                         }
-                stage("deploy in test")
-                {
-                    steps{
-                              sh '''
-                                echo "Hello World"
-                                 '''
-                         }
-                }
-                }
-            }
-            
-        }
-    }
+        
+}
 }
