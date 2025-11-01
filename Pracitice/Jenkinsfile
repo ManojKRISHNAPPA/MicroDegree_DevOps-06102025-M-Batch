@@ -1,14 +1,12 @@
 pipeline{
     agent any
-    parameters{
-        string (name:'ENV', defaultvalue:"Prod", description:"this is to test")
+     parameters {
+        string(name: 'ENV', defaultValue: 'Prod', description: 'This is to test...')
     }
     stages{
         stage("Build stage"){
             steps{
-                sh '''
-                    echo "this is parameter"
-                    '''
+                sh  sh 'echo "Hello World"'
             }
         }
     }
