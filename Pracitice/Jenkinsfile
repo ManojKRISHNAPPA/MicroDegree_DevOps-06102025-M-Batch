@@ -24,6 +24,26 @@ pipeline{
             }
             
         }
+        stage("deploy stage"){
+            stages{
+                stage("checking code"){
+                    steps{
+                              sh '''
+                                echo "Hello World"
+                                 '''
+            }
+                }
+                stage("deploy prod"){
+                    steps{
+                              sh '''
+                                echo "Hello World"
+                                 '''
+            }
+                }
+
+            }
+            
+        }
         
 }
 }
