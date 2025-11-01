@@ -5,11 +5,44 @@ pipeline{
     }
     stages{
         stage("Build stage"){
-            steps{
-                sh '''
-                echo "Hello World"
-                '''
+            stages{
+                stage("checking code"){
+                    steps{
+                              sh '''
+                                echo "Hello World"
+                                 '''
             }
+                }
+                stage("testing code"){
+                    steps{
+                              sh '''
+                                echo "Hello World"
+                                 '''
+            }
+                }
+
+            }
+            
+        }
+        stage("deploying another env"){
+            stages{
+                stage("deploy in dev"){
+                    steps{
+                              sh '''
+                                echo "Hello World"
+                                 '''
+                         }
+                stage("deploy in test")
+                {
+                    steps{
+                              sh '''
+                                echo "Hello World"
+                                 '''
+                         }
+                }
+                }
+            }
+            
         }
     }
 }
