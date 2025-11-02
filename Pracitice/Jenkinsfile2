@@ -27,7 +27,7 @@ pipeline
                             echo 'deploy review'
                         }
           }
-          stage("Dev Env")
+          stage("Testing Env")
             {
                 parallel{
                     stage("manual tesing"){
@@ -36,7 +36,7 @@ pipeline
                             echo 'code review'
                         }
                     }
-                     stage("automation teting"){
+                     stage("automation testing"){
                         agent any
                         steps{
                             echo 'code review'
