@@ -26,7 +26,24 @@ pipeline
                         steps{
                             echo 'deploy review'
                         }
-          }  
+          }
+          stage("Dev Env")
+            {
+                parallel{
+                    stage("manual tesing"){
+                        agent any
+                        steps{
+                            echo 'code review'
+                        }
+                    }
+                     stage("automation teting"){
+                        agent any
+                        steps{
+                            echo 'code review'
+                        }
+                    }
+                }
+            }  
     }
 }
         
