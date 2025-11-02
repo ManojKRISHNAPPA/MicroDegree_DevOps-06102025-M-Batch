@@ -1,14 +1,16 @@
 pipeline{
-    agent any
+    agent none
         stages{
             stage("Dev Env"){
                 parallel{
                     stage("build code"){
+                        agent any
                         steps{
                             echo 'code review'
                         }
                     }
                      stage("test code"){
+                        agent any
                         steps{
                             echo 'code review'
                         }
@@ -25,11 +27,13 @@ pipeline{
             stage("test Env"){
                 parallel{
                     stage("manual testing"){
+                        agent any
                         steps{
                             echo 'code review'
                         }
                     }
                      stage("Automation"){
+                        agent any
                         steps{
                             echo 'code review'
                         }
