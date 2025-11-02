@@ -20,6 +20,13 @@ pipeline
                     }
                 }
             }
+          stage("deploy code")
+          {
+                        agent any
+                        steps{
+                            echo 'deploy review'
+                        }
+          }  
     }
 }
         
