@@ -43,7 +43,14 @@ pipeline
                         }
                     }
                 }
-            }  
+            }
+            stage("production deployment")
+          {
+                        agent any
+                        steps{
+                            echo 'deploy review'
+                        }
+          }  
     }
 }
         
