@@ -8,15 +8,8 @@ pipeline{
                         steps{
                             echo 'code review'
                         }
-                    stage("test  the code"){
-                        agent any
-                        steps{
-                            echo "test the code"
-                        }
-                     }
                     }
                 }
             }
         }
-    
-}
+    }
