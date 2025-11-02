@@ -17,5 +17,21 @@ pipeline{
                     }
                 }
             }
+            stage("test Env"){
+                parallel{
+                    stage("build code"){
+                        agent any
+                        steps{
+                            echo 'code review'
+                        }
+                    }
+                     stage("Automation"){
+                        agent any
+                        steps{
+                            echo 'code review'
+                        }
+                    }
+                }
+            }
         }
     }
