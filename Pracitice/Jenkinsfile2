@@ -9,6 +9,12 @@ pipeline{
                             echo 'code review'
                         }
                     }
+                     stage("test code"){
+                        agent any
+                        steps{
+                            echo 'code review'
+                        }
+                    }
                 }
             }
         }
