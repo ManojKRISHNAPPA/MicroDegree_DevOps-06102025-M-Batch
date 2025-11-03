@@ -4,6 +4,11 @@ pipeline {
     }
 
     stages{
+        stage('host'){
+            steps{
+                sh 'hostname'
+            }
+        }        
         stage('Ip adress'){
             steps{
                 sh 'hostname -I'
