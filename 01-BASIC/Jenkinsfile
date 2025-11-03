@@ -5,7 +5,7 @@ pipeline{
         stage('Hello'){
             steps{
                 sh'''
-                    echo "First stage"
+                    python3 app.py
                 '''
             }
         }
