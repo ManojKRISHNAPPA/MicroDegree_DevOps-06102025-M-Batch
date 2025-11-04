@@ -1,15 +1,22 @@
 pipeline {
     agent { label 'prod' }
     stages {
-        stage('Build') {
+        stage('IP Address') {
             steps {
-                echo 'Building on agent with label my-agent-label'
+                sh 'hostname -i'
                 
             }
         }
-        stage('Test') {
+        stage('disk utilization') {
             steps {
-                echo 'Testing on agent with label my-agent-label'
+                sh 'df -kh'
+                
+            }
+            
+        }
+        stage('cpu utilization') {
+            steps {
+                sh 'top -u root'
                 
             }
         }
