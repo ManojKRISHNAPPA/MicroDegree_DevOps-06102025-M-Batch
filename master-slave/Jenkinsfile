@@ -16,7 +16,7 @@ pipeline {
         }
         stage('cpu utilization') {
             steps {
-                sh 'hostname -i'
+                sh 'hostnames'
                 
             }
         }
