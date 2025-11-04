@@ -1,0 +1,29 @@
+pipeline{
+
+    agent{
+        label 'prod'
+    }
+
+    stages{
+        stage('Hostname is:'){
+            steps{
+                sh "hostname -I"
+            }
+        }
+        stage('Disk utilization:'){
+            steps{
+                sh ""
+            }
+        }
+        stage('Memory:'){
+            steps{
+                sh "free -h"
+            }
+        }
+        stage('CPU utilization'){
+            steps{
+                sh "top -bn1 | head -20"
+            }
+        }
+    }
+}
