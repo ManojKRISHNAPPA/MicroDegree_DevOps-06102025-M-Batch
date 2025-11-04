@@ -1,1 +1,12 @@
 
+pipeline{
+    agent 
+    lable 'prod'
+    stages {
+        stage(''){
+            steps{
+                sh echo 'this '
+            }
+        }
+    }
+}
