@@ -1,17 +1,16 @@
-
-pipeline{
-    agent {
-              lable 'prod'
-    }
+pipeline {
+    agent { label 'prod' }
     stages {
-        stage('prod node'){
-            steps{
-                shsh 'echo "this is first run"'
+        stage('Build') {
+            steps {
+                echo 'Building on agent with label my-agent-label'
+                
             }
         }
-        stage('prodgo node'){
-            steps{
-                sh 'echo "this is second run"'
+        stage('Test') {
+            steps {
+                echo 'Testing on agent with label my-agent-label'
+                
             }
         }
     }
