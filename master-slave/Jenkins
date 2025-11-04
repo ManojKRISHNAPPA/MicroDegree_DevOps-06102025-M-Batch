@@ -3,9 +3,14 @@ pipeline{
     agent 
     lable 'prod'
     stages {
-        stage(''){
+        stage('prod node'){
             steps{
-                sh echo 'this '
+                sh echo 'this is first run'
+            }
+        }
+        stage('prod node'){
+            steps{
+                sh echo 'this is second run'
             }
         }
     }
