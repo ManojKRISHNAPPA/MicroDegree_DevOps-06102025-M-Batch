@@ -5,9 +5,12 @@ pipeline{
     }
 
     stages{
-        stage('IP is:'){
+        stage('IP and its hostname is:'){
             steps{
-                sh "hostname -I"
+                sh '''
+                    hostname -I
+                    hostname
+                '''
             }
         }
         stage('Disk utilization:'){
