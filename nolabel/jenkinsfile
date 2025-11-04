@@ -1,0 +1,30 @@
+pipeline{
+
+    agent any
+        
+    stages{
+        stage('IP and its hostname is:'){
+            steps{
+                sh '''
+                    hostname -I
+                    hostname
+                '''
+            }
+        }
+        stage('Disk utilization:'){
+            steps{
+                sh ""
+            }
+        }
+        stage('Memory:'){
+            steps{
+                sh "free -h"
+            }
+        }
+        stage('CPU utilization'){
+            steps{
+                sh "top -bn1 | head -20"
+            }
+        }
+    }
+}
