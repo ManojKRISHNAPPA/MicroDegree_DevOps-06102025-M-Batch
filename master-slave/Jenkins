@@ -4,11 +4,13 @@ pipeline{
     lable 'prod'
     stages {
         stage('prod node'){
+            agent any
             steps{
                 sh echo 'this is first run'
             }
         }
         stage('prodgo node'){
+            agent any
             steps{
                 sh echo 'this is second run'
             }
