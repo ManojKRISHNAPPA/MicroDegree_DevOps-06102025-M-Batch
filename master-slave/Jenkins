@@ -8,7 +8,7 @@ pipeline{
                 sh echo 'this is first run'
             }
         }
-        stage('prod node'){
+        stage('prodgo node'){
             steps{
                 sh echo 'this is second run'
             }
