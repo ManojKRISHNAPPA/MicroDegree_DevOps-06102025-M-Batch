@@ -5,7 +5,7 @@ pipeline{
     }
 
     stages{
-        stage('Hostname is:'){
+        stage('IP is:'){
             steps{
                 sh "hostname -I"
             }
