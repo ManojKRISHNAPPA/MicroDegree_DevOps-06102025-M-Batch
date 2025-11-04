@@ -1,18 +1,17 @@
 
 pipeline{
-    agent 
-    lable 'prod'
+    agent {
+              lable 'prod'
+    }
     stages {
         stage('prod node'){
-            agent any
             steps{
-                sh echo 'this is first run'
+                shsh 'echo "this is first run"'
             }
         }
         stage('prodgo node'){
-            agent any
             steps{
-                sh echo 'this is second run'
+                sh 'echo "this is second run"'
             }
         }
     }
