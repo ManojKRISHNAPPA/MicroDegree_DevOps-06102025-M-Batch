@@ -34,6 +34,14 @@ pipeline{
             }
 
         }
+        stage('container build'){
+            steps{
+                sh'''
+                    echo "this is container test"
+                '''
+            }
+
+        }
         
     }
 }
