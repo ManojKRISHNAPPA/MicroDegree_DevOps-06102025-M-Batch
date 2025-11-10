@@ -58,6 +58,14 @@ pipeline{
             }
 
         }
+        stage('docker4 build'){
+            steps{
+                sh'''
+                    echo "this is docker4 test"
+                '''
+            }
+
+        }
         
     }
 }
