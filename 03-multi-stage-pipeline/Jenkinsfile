@@ -30,5 +30,14 @@ pipeline {
                 }
             }
         }
+         stage('Deploying test env') {
+            stages {
+                stage('deploy_to_test') {
+                    steps {
+                        sh 'echo "testing in dev"'
+                    }
+                }
+            }
+        }
     }
 }
