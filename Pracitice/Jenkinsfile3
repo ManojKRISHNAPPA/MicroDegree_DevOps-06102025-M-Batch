@@ -22,7 +22,7 @@ pipeline {
         }
         stage("publish the report"){
             steps{
-                perfReport filterRegex: '', sourceDataFiles: "**/*.jtl"
+                archiveArtifacts artifacts: 'result.jtl', fingerprint: true
             }
         }
     }
