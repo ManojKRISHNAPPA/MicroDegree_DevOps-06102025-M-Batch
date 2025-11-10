@@ -53,7 +53,7 @@ pipeline{
         stage('docker3 build'){
             steps{
                 sh'''
-                    echo "this is container test"
+                    echo "this is docker3 test"
                 '''
             }
 
