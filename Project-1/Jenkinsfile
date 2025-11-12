@@ -15,7 +15,7 @@ pipeline{
             steps{
                 script {
                     dir("terraform"){
-                        git branch: 'IAC-Project',url:'https://github.com/ManojKRISHNAPPA/reimagined-journey.git'
+                        git branch: 'IAC-Project',url:'https://github.com/ManojKRISHNAPPA/MicroDegree_DevOps-06102025-M-Batch.git'
                     }
                 }
             }
