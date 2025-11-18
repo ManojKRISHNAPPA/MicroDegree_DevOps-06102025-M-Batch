@@ -5,7 +5,7 @@ provider "aws" {
   
 }
 resource "aws_instance" "practice-terrafrom" {
-    ami = "ami-0cae6d6fe6048ca2c"
+    ami = "ami-0c398cb65a93047f2"
     instance_type = "t3.micro"
   
 }
