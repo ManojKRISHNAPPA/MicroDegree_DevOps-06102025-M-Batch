@@ -15,5 +15,12 @@ pipeline{
                     '''
             }
         }
+        stage('final'){
+            steps{
+                sh '''
+                    echo this is final stage
+                    '''
+            }
+        }
     }
 }
