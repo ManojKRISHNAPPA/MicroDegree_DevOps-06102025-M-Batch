@@ -1,10 +1,2 @@
 
-print("Good morning from ashwini..")
-
-hiiiiiii
-
-Hello Madhusudhan..
-.
-     
-
-testing--.1
+print("Good morning from annapoorna
