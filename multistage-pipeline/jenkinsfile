@@ -1,28 +1,29 @@
-pipeline{
+pipeline {
     agent any
     parameters {
         string(name: 'BRANCH_NAME', defaultValue: 'PROD', description: 'This is to test')
     }
-    stages{
-        stage('Build script'){
-            steps{
+    stages {
+        stage('Build script') {
+            steps {
                 sh '''
                     echo "Building the application"
                 '''
-                }
+            }
         }
-        stage('Test script'){
-            steps{
+        stage('Test script') {
+            steps {
                 sh '''
                     echo "Testing the application"
                 '''
             }
-        stage('Deploy script'){
-            steps{
+        }
+        stage('Deploy script') {
+            steps {
                 sh '''
                     echo "Deploying the application"
                 '''
             }
         }
-        }
     }
+}
