@@ -11,5 +11,18 @@ pipeline{
                 '''
                 }
         }
+        stage('Test script'){
+            steps{
+                sh '''
+                    echo "Testing the application"
+                '''
+            }
+        stage('Deploy script'){
+            steps{
+                sh '''
+                    echo "Deploying the application"
+                '''
+            }
+        }
         }
     }
